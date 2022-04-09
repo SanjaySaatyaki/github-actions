@@ -1,4 +1,4 @@
-name: Actions yml
+name: Actions Workflow
 
 on: [push,pull_request]
 
