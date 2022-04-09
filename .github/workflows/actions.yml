@@ -5,6 +5,13 @@ on:
     branches:
       - master
       - 'feature/*'
+      - '!feature/featC' #will be excluded
+    # tags:
+    #   - v1.*
+    # paths:
+    #   - '**.js'
+    # branches-ignore:
+    #   - development
   # repository_dispatch:
   #   types: [build]
   # schedule:
