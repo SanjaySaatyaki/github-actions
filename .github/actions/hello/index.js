@@ -3,9 +3,9 @@ const github = require('@actions/github');
 
 try{
     // throw(new Error("some error message"));
-    const name = core.getInput('who-to-greet');
+    const name = core.getInput("who-to-greet");
     
-    console.log('Hello ${name}!');
+    console.log(`Hello ${name}`);
     
     const time = new Date();
     core.setOutput('time', time.toTimeString());
