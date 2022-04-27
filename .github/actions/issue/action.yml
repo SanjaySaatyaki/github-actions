@@ -1,0 +1,22 @@
+name: Open Git Issue
+author: sanjay saatyaki
+description: 'Opens a github issue'
+inputs:
+  token:
+    description: "Github token"
+    required: true
+  title:
+    description: "Issue Title"
+    required: true
+  body:
+    description: "Issue Body"
+    required: false
+  assignees:
+    description: "Issue assignee"
+    required: false
+outputs:
+  issue:
+    description: 'The issue object as json'
+runs:
+  using: node12
+  main: dist/index.js
