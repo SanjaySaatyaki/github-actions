@@ -4140,14 +4140,15 @@ try{
     const octokit = new github.GitHub(token);
 
     const response = await octokit.issues.create({
-        owner: github.context.repo.owner,
-        repo: github.context.repo.repo,
-        title:title,
-        body:body,
-        assignees:assignees ? assignees.split("\n") : undefined
-    })
+        // owner: github.context.repo.owner,
+        // repo: github.context.repo.repo,
+        ...github.context.repo,
+        title,
+        body,
+        assignees: assignees ? assignees.split("\n") : undefined
+      });
     
-    core.setOutput('issue', JSON.stringify(response.data))
+    core.setOutput('issue', JSON.stringify(response.data));
 
 }catch(error){
     core.setFailed (error.message);
