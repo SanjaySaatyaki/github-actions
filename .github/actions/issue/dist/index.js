@@ -1233,6 +1233,14 @@ exports.paginatingEndpoints = paginatingEndpoints;
 
 /***/ }),
 
+/***/ 313:
+/***/ (function(module) {
+
+module.exports = eval("require")("@octokit/rest");
+
+
+/***/ }),
+
 /***/ 356:
 /***/ (function(__unusedmodule, exports) {
 
@@ -4129,6 +4137,7 @@ exports.getIDToken = getIDToken;
 
 const core = __webpack_require__(470);
 const github = __webpack_require__(469);
+const { Octokit } = __webpack_require__(313);
 
 async function run() {
   try {
