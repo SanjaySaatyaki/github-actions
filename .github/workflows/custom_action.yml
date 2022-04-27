@@ -16,7 +16,7 @@ jobs:
             SanjaySaatyaki
       - run: |
           echo ${{steps.Issues.outputs.issue}}
-      - uses: ./.github/actions/hello
+      - uses: ./.github/actions/hello-docker
         id: Hello
         with:
           who-to-greet: "World"
