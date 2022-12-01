@@ -1,0 +1,21 @@
+name: Test Environment Variables
+
+on:
+  workflow_call:
+
+env:
+  WF_ENV: Global Env
+  MYTOKEN: ${{secrets.GITHUB_TOKEN}}
+
+jobs:
+  exec_pyhon:
+    runs-on: windows-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Execute python
+        run: |
+          python schedule.py
