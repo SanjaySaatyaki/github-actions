@@ -1,7 +1,7 @@
 name: Test Environment Variables
 
 on:
-  workflow_call:
+  workflow_dispatch:
 
 env:
   WF_ENV: Global Env
